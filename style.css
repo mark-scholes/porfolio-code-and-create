@@ -12,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .center {
@@ -96,8 +97,15 @@ html {
   height: 4rem;
   background-color: #e41c6f;
   box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  position: absolute;
+  z-index: 12;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 12;
+}
 .navbar-link {
   font-size: 1.7rem;
   font-weight: 600;
@@ -106,6 +114,10 @@ html {
   letter-spacing: 0.3rem;
   text-transform: uppercase;
   position: relative;
+}
+
+.change.navbar-link {
+  color: #fff;
 }
 
 .navbar-link::before {
@@ -123,6 +135,10 @@ html {
   color: #fff;
 }
 .navbar-link:hover::before {
+  width: 130%;
+}
+
+.change.navbar-link::before {
   width: 130%;
 }
 /* End of Navbar */
